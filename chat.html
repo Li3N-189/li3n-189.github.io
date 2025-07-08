@@ -109,8 +109,8 @@ img {
       <h5 style="padding-left: 20px;">She's saying hello to you! Introduce yourself using the following template.</h5>
     </div>
     <div class="div_input">
-      <input type="text" placeholder="你好!我叫○○，你呢？">
-      <span class="span_icon" onclick="document.querySelector('.div_user').style.opacity = '1'; document.querySelector('input').value = '';"><img src="plane.png" width="30" height="30"></span>
+      <input type="text" value="你好!我叫○○，你呢？">
+      <span class="span_icon" onclick="document.querySelector('.div_userchat p').innerText = document.querySelector('input').value; document.querySelector('.div_user').style.opacity = '1'; document.querySelector('input').value = '';"><img src="plane.png" width="30" height="30"></span>
     </div>
   </div>
 </a>
