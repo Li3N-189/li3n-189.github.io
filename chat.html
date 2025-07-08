@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang='en' class=''>
+
+<head>
+
+  <meta charset='UTF-8'>
+  <title></title>
+
+<style>
+body {
+  font-family: ui-sans-serif, -apple-system, system-ui, Segoe UI, Helvetica, Apple Color Emoji, Arial, sans-serif, Segoe UI Emoji, Segoe UI Symbol;
+}
+.gray {
+  color: gray;
+}
+div.model_div {
+  display: flex;
+  border-radius: 5px;
+  margin: 10px;
+}
+div.model_div:hover {
+  background-color: #eee;
+}
+div.model_icon {
+  display: block;
+  witdh: 80px;
+  height: 80px;
+}
+img.model_img {
+  border-radius: 50%;
+}
+.div_chatbot, .div_user {
+  display: flex;
+}
+.div_user {
+  flex-flow: row-reverse;
+}
+.div_chatbotchat {
+  background-color: #eee;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.div_userchat {
+  background-color: #9f9;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.p_translation {
+  color: #08f;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+}
+.div_bottom {
+  text-align: center;
+}
+input {
+  border-radius: 50px;
+  border-color: #ddd;
+  border-width: 2px;
+  font-size: 20px;
+  padding: 0 10px;
+}
+.div_hint {
+  display: flex;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px black;
+}
+.div_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.span_icon {
+  margin-left: 20px;
+}
+img {
+  cursor: pointer;
+}
+  </style>
+
+</head>
+
+<body>
+  <h1>Chat</h1>
+  <div class="div_frame">
+    <div class="div_chatbot">
+      <img class="model_img" src="moesode_woman.png" alt="a" width="40" height="40">
+      <div class="div_chatbotchat">
+        <p>你好！</p>
+        <p class="p_translation" onclick="document.querySelector('#translation').style.opacity = '1';">+Show translation</p>
+        <p class"gray" id="translation" style="opacity: 0; margin: 0; font-size: 12px;">Hello!</p>
+      </div>
+    </div>
+    <div class="div_user" style="opacity: 0;">
+      <div style="display:block;width:40px;height:40px;border-radius:50%;background-color:#eee;"></div>
+      <div class="div_userchat">
+        <p>你好！我叫铃木，你呢？</p>
+      </div>
+    </div>
+  </div>
+  <div class="div_bottom">
+    <div class="div_hint">
+      <img src="bulb.png" width="30" height="30">
+      <h5 style="padding-left: 20px;">She's saying hello to you! Introduce yourself using the following template.</h5>
+    </div>
+    <div class="div_input">
+      <input type="text" placeholder="你好!我叫○○，你呢？">
+      <span class="span_icon" onclick="document.querySelector('.div_user').style.opacity = '1'; document.querySelector('input').value = '';"><img src="plane.png" width="30" height="30"></span>
+    </div>
+  </div>
+</a>
+  
+  
+</body>
+
+</html>
